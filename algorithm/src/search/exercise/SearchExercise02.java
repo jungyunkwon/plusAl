@@ -22,16 +22,16 @@ public class SearchExercise02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("요솟수:");
+        System.out.print("요솟수: ");
         int num = sc.nextInt();
         int[] x = new int[num]; // 요소수가 입력받은 값인 배열
 
         for (int i = 0; i < num; i++) {
-            System.out.print("x["+ i +"]:");
+            System.out.print("x["+ i +"]: ");
             x[i] = sc.nextInt();
         }
 
-        System.out.print("검색할 값:"); // 키값 입력
+        System.out.print("검색할 값: "); // 키값 입력
         int ky = sc.nextInt();
         int idx = seqSearch(x, num, ky); // 배열 x에서 키값이 ky인 요소 검색
 
