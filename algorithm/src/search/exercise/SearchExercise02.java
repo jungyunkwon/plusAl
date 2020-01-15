@@ -13,8 +13,8 @@ public class SearchExercise02 {
         gu.printGrid(a, n, key);
 
         while (true) {
-            if (i == n)   return -1; // 검색 실패
-            if (a[i] ==key)   return i; // 검색 성공
+            if (i == n) return -1; // 검색 실패
+            if (a[i] ==key) return i; // 검색 성공
             i++;
         }
     }
