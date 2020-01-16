@@ -9,6 +9,8 @@ public class SearchExercise02 {
     static int seqSearch(int[] a , int n, int key) {
         int i = 0;
 
+        // 검색하고자 하는 배열, 배열의 크기, 찾고자 하는 값을
+        // 파라미터로 전달시 그리드를 그려준다.
         GridUtils gu = new GridUtils();
         gu.printGrid(a, n, key);
 
