@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 // 선형 검색 (보초법)
 public class SearchExample02 {
+
    // 요소수가 n인 배열 a에서 key 와 같은 요소를 보초법으로 선형 검색한다.
     static int seqSearch(int[] a , int n, int key) {
         int i = 0;
