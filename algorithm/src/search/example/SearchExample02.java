@@ -3,6 +3,7 @@ package search.example;
 import search.utils.GridUtils;
 
 import java.util.Scanner;
+
 // 선형 검색 (보초법)
 public class SearchExample02 {
    // 요소수가 n인 배열 a에서 key 와 같은 요소를 보초법으로 선형 검색한다.
@@ -12,7 +13,8 @@ public class SearchExample02 {
         a[n] = key; // 보초를 추가
 
         while (true) {
-            if (a[i] == key) break; // 검색 성공
+            if (a[i] == key)
+                break; // 검색 성공
 
             i++;
         }
