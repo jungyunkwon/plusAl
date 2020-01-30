@@ -84,7 +84,7 @@ public class study03 {
 		public static final Comparator<PhysData> c= new VisionOrderComparator();
 		private static class VisionOrderComparator implements Comparator<PhysData>{
 			public int compare(PhysData d1,PhysData d2) {
-				return (d1.vision<d2.vision)? 1:(d1.vision>d2.vision)? -1:0;
+				return (d1.vision>d2.vision)? -1:(d1.vision<d2.vision)? 1:0;
 			}
 		}
 		
