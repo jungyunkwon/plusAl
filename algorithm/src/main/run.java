@@ -118,14 +118,15 @@ public class run {
 		Scanner scan= new Scanner(System.in);
 		PhysData[] x= {
 			new PhysData("이나령",162,1.5),
-			new PhysData("유지훈",168,1.2),
-			new PhysData("권정윤",170,0.8),
-			new PhysData("이두부",180,0.7),
-			new PhysData("토스트",190,0.5),
-			new PhysData("알고리",195,0.4)
+			new PhysData("유지훈",168,0.5),
+			new PhysData("권정윤",170,0.7),
+			new PhysData("이두부",180,0.8),
+			new PhysData("토스트",190,0.4),
+			new PhysData("알고리",195,1.2)
 		};
 		System.out.println("찾고 싶은 시력을 입력해주세요.");
 		double vision=scan.nextDouble();
+		Arrays.sort(x, PhysData.c);
 		int idx=Arrays.binarySearch(x, new PhysData("",0,vision), PhysData.c);
 		if(idx<0) {
 			System.out.println("검색에 실패했습니다. 삽입 포인트 :"+idx);
