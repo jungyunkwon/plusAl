@@ -1,5 +1,7 @@
 package ch03;
 
+import java.util.Comparator;
+
 public class study03 {
 
 	public static int binSearch(int a[], int n, int key) {
@@ -61,6 +63,32 @@ public class study03 {
 			}
 		}while(start<=last); 
 		return -1;
+	}
+	public static class PhysData{
+		private String name;
+		private int height;
+		private double vision;
+		
+		public PhysData(String name,int height,double vision) {
+			this.name=name; this.height=height; this.vision=vision;
+		}
+		
+		
+		//시력 내림차순
+		//틀림
+//		public static final Comparator<PhysData> cd= new Comparator<PhyscData>(PhysData cd1,PhysData cd2) {
+//			return (cd1.vision<cd2.vision)? 1:(cd2.vision<cd1.vision)? -1:0;
+//		};
+		
+		//맞음
+		public static final Comparator<PhysData> c= new VisionOrderComparator();
+		private static class VisionOrderComparator implements Comparator<PhysData>{
+			public int compare(PhysData d1,PhysData d2) {
+				return (d1.vision<d2.vision)? -1:(d1.vision>d2.vision)? 1:0;
+			}
+		}
+		
+		
 	}
 	
 	

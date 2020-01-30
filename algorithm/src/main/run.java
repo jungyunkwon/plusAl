@@ -1,16 +1,18 @@
 package main;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 import ch03.study02;
 import ch03.study03;
+import ch03.study03.PhysData;
 
 public class run {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		binSearchTester();
+		visionSearch();
 	}
 	public static void searchIdxMain() {
 		Scanner scan= new Scanner(System.in);
@@ -106,6 +108,26 @@ public class run {
 		int idx=Arrays.binarySearch(a, key);
 		if(idx<0) {
 			idx=(idx+1)*(-1);
+			System.out.println("검색에 실패했습니다. 삽입 포인트 :"+idx);
+		}else {
+			System.out.println("요소가 있습니다. 삽입 포인트 : "+idx);
+		}
+	}
+	public static void visionSearch() {
+		//내림차순 정렬 후 
+		Scanner scan= new Scanner(System.in);
+		PhysData[] x= {
+			new PhysData("이나령",162,0.3),
+			new PhysData("유지훈",168,0.8),
+			new PhysData("권정윤",170,1.0),
+			new PhysData("이두부",180,1.5),
+			new PhysData("토스트",190,0.7),
+			new PhysData("알고리",195,0.3)
+		};
+		System.out.println("찾고 싶은 시력을 입력해주세요.");
+		double vision=scan.nextDouble();
+		int idx=Arrays.binarySearch(x, new PhysData("",0,vision), PhysData.c);
+		if(idx<0) {
 			System.out.println("검색에 실패했습니다. 삽입 포인트 :"+idx);
 		}else {
 			System.out.println("요소가 있습니다. 삽입 포인트 : "+idx);
